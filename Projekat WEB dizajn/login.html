@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSTG</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="user.js"></script>
+	</head>
+
+	<body>
+
+	<div id="snijeg"></div>
+	
+	<section class="cover" id="fp">
+		<div class="col-sm-12">
+			<div id="login" class="col-md-4 forma">
+				<h4 class="theme-color">Login</h4><br/>
+				<input type="text" id="user" placeholder="Username" class ="col-md-10"></input><br/><br/>
+				<input type="password" id="password" placeholder="Password" class ="col-md-10"></input><br/><br/>
+				<button button style="cursor:pointer;" class="btn btn-primary bg-aqua" onclick="ucitaj()">Log in</button><br/><br/>
+				<div id="demo" style="color:red; font-size:12px; font-style:italic;"></div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		function ucitaj() {
+			var nizJson = JSON.parse(JSON.stringify(users));
+			var varijabla = document.getElementById('demo');
+			var un = document.getElementById("user").value;
+			var pw = document.getElementById("password").value;
+			var nasli = false;
+
+			console.log(un + " " + pw);
+
+			
+			for(let i = 0; i<nizJson.length; i++) {
+				if(nizJson[i].username === un &&  nizJson[i].password === pw) {
+					nasli = true;
+					break
+				}
+			}
+
+			if(nasli === true) {
+				console.log("selam");
+				location.replace('tabela1.html');
+			}
+			else {
+				varijabla.innerHTML = "Nije pronađen korisnik sa unesenim username-om i password-om.";
+			}
+		}
+
+	</script>
+	
+	</body>
+</html> 

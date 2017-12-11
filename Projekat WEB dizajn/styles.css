@@ -1,0 +1,284 @@
+/* Custom styles */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+iframe {
+    border: none;         /* Reset default border */
+    height: 100%;
+    width: 100%;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#cover-caption {
+    width: 100%;
+}
+
+#O {
+    font-variant: small-caps;
+}
+
+#fp {
+    background: #222 url('aurora.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    align-items: center;
+}
+
+#fp a:link {
+    transition: all .25s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+#fp a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#fp a:hover {
+    font-size: 18px;
+}
+
+#fp a:active {
+    font-size: 14px;
+}
+
+#menuNavbar {
+    position: absolute; 
+    top:5%; 
+    text-align:center; 
+    line-height: 26px;
+}
+
+#about {
+    height: 80%;
+    line-height: 28px;
+    background-color: #bbbbbb; 
+    color: black;
+}
+
+#team {
+    height: 100%;
+    line-height: 28px;
+    background-color: #dddddd; 
+    color: black;
+}
+
+#team button {
+    background-color: #aaaaaa;
+    border: none;
+    width: 100%;
+    height: 12%;
+}
+
+/* dodati funkcionalnost po zelji */
+#team button:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+#team button:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+#team button:hover {
+    transition: all .35s ease-in-out;
+    background-color: rgb(46, 44, 44);
+    color: white;
+}
+
+/* selected link */
+#team button:active {
+    transition: all .35s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+#sp {
+    background-size: cover;
+    border: 2px solid black;
+    color: black;
+}
+
+#id1 {
+    top:5%;
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+#tutorials {
+    height: 70%;
+    background-color: #aaaaaa; 
+    color: black;
+}
+
+#tutorials a {
+    color: rgba(8, 8, 163, 0.938);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#contact {
+    height: 80%;
+    background-color: #cccccc; 
+    color: black; 
+}
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+#footer a:link {
+    transition: all 0.15s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    font-size: 17px;
+}
+
+#footer a:active {
+    font-size: 15px;
+}
+
+#footer1 {
+    text-align: center; 
+    padding-bottom: 10px; 
+    border-bottom: 1px solid white;
+}
+
+#btntop {
+    transition: all .3s ease-in-out;
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#btntop:hover {
+    width: 150px;
+    color: black;
+    background-color: #d3d3d3;
+    border: none;
+}
+
+#footer a {
+    cursor:pointer;
+}
+
+#fTab {
+    border-top: 1px solid white; 
+}
+
+#animacija {
+    font-size: 20px;
+    width: 25%;
+    color: #fff;
+    overflow: hidden; /* Da ovoga nema content bi se vidio dok se animacija odvija, a mi želimo da se postepeno otkriva */
+    border-right: 2px solid orange; /* Kao kursor koristimo border-right */
+    white-space: nowrap; /* Tekst ostaje u jednoj liniji */
+    margin: 0 auto; /* Osigurava da tekst ostaje centriran */
+    letter-spacing: 2px; /* Širina kursora */
+    animation: 
+      typing 3s steps(16),
+      blink-caret .75s step-end infinite normal;
+}
+
+.forma{
+    border: 2px solid #428bca;
+    left: 30%;
+    padding:20px;
+	height:40%;
+	background-color: #fafafa;
+}
+
+.theme-color{
+	color: #428bca;
+}
+ 
+  /* Animacija */
+@keyframes typing {
+    from { width: 0 } /* Ograničenja za animaciju */
+    to { width: 25% }
+}
+  
+  /* Kursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+ #snijeg {
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:0;
+    
+    -webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+
+/* Animacija snijega */
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+/* Isti kod ali daje podrsku za MS Edge i Mozilla Firefox browsere */
+@-moz-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
+/* */
