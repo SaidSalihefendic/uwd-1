@@ -208,7 +208,7 @@ iframe {
 
 #animacija {
     font-size: 20px;
-    width: 25%;
+    width: 160px;
     color: #fff;
     overflow: hidden; /* Da ovoga nema content bi se vidio dok se animacija odvija, a mi želimo da se postepeno otkriva */
     border-right: 2px solid orange; /* Kao kursor koristimo border-right */
@@ -235,7 +235,7 @@ iframe {
   /* Animacija */
 @keyframes typing {
     from { width: 0 } /* Ograničenja za animaciju */
-    to { width: 25% }
+    to { width: 160px }
 }
   
   /* Kursor */
