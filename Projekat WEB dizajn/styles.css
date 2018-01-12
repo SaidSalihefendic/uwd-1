@@ -206,6 +206,15 @@ iframe {
     border-top: 1px solid white; 
 }
 
+	/*Novost u tabeli*/
+.centralni-popup{
+	display:block;
+	top:10%;
+	position:fixed;
+	float:right;
+	width:100%;
+}
+
 #animacija {
     font-size: 20px;
     width: 160px;
